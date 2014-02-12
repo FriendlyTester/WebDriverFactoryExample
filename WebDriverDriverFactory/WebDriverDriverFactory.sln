@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDriverDriverFactory", "WebDriverDriverFactory\WebDriverDriverFactory.csproj", "{86BAF6FB-8439-4753-B220-C1C1CB1F571D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RichardsTestSuite", "RichardsTestSuite\RichardsTestSuite.csproj", "{25146C22-AAEB-442B-A6B9-FDD69DF56BD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86BAF6FB-8439-4753-B220-C1C1CB1F571D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86BAF6FB-8439-4753-B220-C1C1CB1F571D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86BAF6FB-8439-4753-B220-C1C1CB1F571D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86BAF6FB-8439-4753-B220-C1C1CB1F571D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25146C22-AAEB-442B-A6B9-FDD69DF56BD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25146C22-AAEB-442B-A6B9-FDD69DF56BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25146C22-AAEB-442B-A6B9-FDD69DF56BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25146C22-AAEB-442B-A6B9-FDD69DF56BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
