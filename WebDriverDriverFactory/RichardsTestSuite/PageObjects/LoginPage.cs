@@ -9,8 +9,17 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace RichardsTestSuite.PageObjects
 {
+    /// <summary>
+    /// A PageObject for the Hotmail LoginPage, using the PageObjects suport class.
+    /// </summary>
     public class LoginPage
     {
+        /// <summary>
+        /// Note that I have used IWebDriver.
+        /// As mentioned in the DriverFactory this is because all drivers are contracted to this interface.
+        /// So if you only use methods available on the Interface, then they will also be available on all drivers.
+        /// Therefore allowing your page object to be used by any Driver.
+        /// </summary>
         private IWebDriver _driver;
 
         [FindsBy(How = How.Id, Using = "i0116")]

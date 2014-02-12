@@ -6,6 +6,10 @@ using OpenQA.Selenium;
 
 namespace RichardsTestSuite.SetUp
 {
+    /// <summary>
+    /// Configuration object
+    /// This would usually also contain other test specific config values required to be read from app.config
+    /// </summary>
     public class TestConfiguration
     {
         public static bool Remote { get; set; }
@@ -17,6 +21,8 @@ namespace RichardsTestSuite.SetUp
 
         public static string ApplicationUrl { get; set; }
 
+        //Because this is static it will be executed at the start of any test run.
+        //Reads the keys from the app.config and assigns them to the properties declared above.
         static TestConfiguration()
         {
             var reader = new AppSettingsReader();
@@ -36,6 +42,10 @@ namespace RichardsTestSuite.SetUp
             ApplicationUrl = (string)reader.GetValue("ApplicationUrl", typeof(string));
         }
 
+        /// <summary>
+        /// This method converts the OS string in the app.config to the matching value in the PlatformType Enum.
+        /// </summary>
+        /// <returns>A PlatformType instance</returns>
         private static PlatformType GetPlatformType()
         {
             var reader = new AppSettingsReader();
@@ -45,11 +55,17 @@ namespace RichardsTestSuite.SetUp
             return Enum.TryParse(FirstCharToUpper(platformValue), out platform) ? platform : PlatformType.Windows;
         }
 
+        /// <summary>
+        /// In order to match the enum will have to Title case the OS string value.
+        /// This is more protection for when someone enters the OS all lowercase
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static string FirstCharToUpper(string input)
         {
             if (String.IsNullOrEmpty(input))
                 throw new ArgumentException("The string was null or empty.");
-            return input.First().ToString(CultureInfo.InvariantCulture).ToUpper() + String.Join("", input.Skip(1)).ToLower();
+            return input.First().ToString().ToUpper() + String.Join("", input.Skip(1)).ToLower();
         }
     }
 }

@@ -18,6 +18,8 @@ namespace RichardsTestSuite.Tests
         [SetUp]
         public void SetUp()
         {
+            //We already have a Driver Instance because the SetUpFixture will have created it.
+            //However I like to assign to a local property.
             _driver = DriverSetup.Driver;
             _driver.Navigate().GoToUrl(TestConfiguration.ApplicationUrl);
         }

@@ -2,6 +2,10 @@
 
 namespace WebDriverDriverFactory.Config
 {
+    /// <summary>
+    /// A RemoteDriverConfiguration class
+    /// Used to construct driver requirements to send to the GRID Hub
+    /// </summary>
     public class RemoteDriverConfiguration
     {
         public string Browser { get; set; }
