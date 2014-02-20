@@ -59,7 +59,7 @@ namespace RichardsTestSuite.PageObjects
             return new LoginPage(_driver);
         }
 
-        public string ReadLoingErrorMessage()
+        public string ReadLoginErrorMessage()
         {
             return LblLoginErrorMessage.Text;
         }
