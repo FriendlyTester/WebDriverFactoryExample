@@ -32,7 +32,7 @@ namespace RichardsTestSuite.Tests
             loginPage.PopulatePassword("password");
             loginPage = loginPage.ClickLoginExpectingError();
 
-            Assert.That(loginPage.ReadLoingErrorMessage(), Is.EqualTo("That Microsoft account doesn't exist. Enter a different email address or get a new account."));
+            Assert.That(loginPage.ReadLoginErrorMessage(), Is.EqualTo("That Microsoft account doesn't exist. Enter a different email address or get a new account."));
         }
     }
 }
